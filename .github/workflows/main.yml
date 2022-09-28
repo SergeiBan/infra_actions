@@ -29,10 +29,10 @@ jobs:
         python manage.py test
     
   build_and_push_to_docker_hub:
-
+    runs-on: ubuntu-latest
     name: Push Docker image to Docker Hub
-    runs_on: ubuntu-latest
     needs: tests
+
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
